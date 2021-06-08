@@ -1,0 +1,11 @@
+{% load news_tags %}
+<div class="container pb-3">
+    <ul class="nav nav-pills">
+        {% get_categories as categories %}
+        {% for item in categories %}
+      <li class="nav-item">
+        <a class="nav-link " href="{{ item.get_absolute_url }}">{{item.title}}</a>
+      </li>
+      {% endfor %}
+    </ul>
+</div>
